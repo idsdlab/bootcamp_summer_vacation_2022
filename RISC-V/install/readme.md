@@ -1,5 +1,5 @@
 
-# This README.md is refer to schoolRISCV (https://github.com/zhelnio/schoolRISCV)
+# This README.md references schoolRISCV (https://github.com/zhelnio/schoolRISCV)
 
 # HDL tools install
 
