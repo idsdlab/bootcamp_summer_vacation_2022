@@ -1,0 +1,35 @@
+export SNPSLMD_LICENSE_FILE=
+#export SNPSLMD_LICENSE_FILE=/opt/opt/tools/synopsys_license.txt
+
+export SNPSLMD_LICENSE_FILE=27020@smu409-01
+
+#export VCS_HOME="/opt/tools/synopsys/vcs-mx/O-2018.09-SP2-3"
+#export VCS_HOME="/tools/synopsys/vcs-mx/O-2018.09-SP2-3"
+export VCS_HOME="/tools/synopsys/vcs-all/R-2020.12-SP2"
+export DVE_HOME=${VCS_HOME}/gui/dve
+export PATH=${VCS_HOME}/bin:${PATH}
+
+#alias vcs='vcs -full64'
+export VCS_ARCH_OVERRIDE=linux
+
+export VERDI_HOME=
+#export VERDI_HOME=/tools/synopsys/verdi/P-2019.06-SP2-12
+export VERDI_HOME=/tools/synopsys/verdi/R-2020.12-SP2
+#export LD_LIBRARY_PATH=${NOVAS_HOME}/share/PLI/MODELSIM/LINUXAMD64:${LD_LIBRARY_PATH}:/usr/lib
+#export LD_LIBRARY_PATH=${VERDI_HOME}/share/PLI/IUS/LINUXAMD64:${LD_LIBRARY_PATH}:/usr/lib
+export LD_LIBRARY_PATH=${VERDI_HOME}/share/PLI/VCS/LINUXAMD64:${LD_LIBRARY_PATH}:/usr/lib
+export PATH=${VERDI_HOME}/bin:${PATH}
+
+export ICC2_HOME=/tools/synopsys/icc2/Q-2019.12-SP6
+export PATH=${ICC2_HOME}/bin:${PATH}
+
+export SYNOPSYS_LC_ROOT=/tools/synopsys/lc/Q-2019.12-SP5
+export PATH=${SYNOPSYS_LC_ROOT}/bin:${PATH}
+
+#export DC_HOME=/tools/synopsys/syn/O-2018.06-SP5-5
+export DC_HOME=/tools/synopsys/syn/R-2020.09
+export PATH=${DC_HOME}/bin:${PATH}
+
+#export PT_HOME=/tools/synopsys/pts/O-2018.06-SP5-2
+export PT_HOME=/tools/synopsys/pts/P-2019.03-SP5-1
+export PATH=${PT_HOME}/bin:${PATH}
