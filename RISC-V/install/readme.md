@@ -26,9 +26,7 @@ You can choose any way of installation:
 1. Ubuntu manual install
 1. Windows 10 install
 
-## <span style="color:green">CentOS automatic install</span>
-
-## CentOS manual install
+## <span style="color:green">CentOS manual install</span>
 
 ### You should check user & permit
     $# means root
