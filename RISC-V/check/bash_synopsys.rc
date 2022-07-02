@@ -1,6 +1,4 @@
 export SNPSLMD_LICENSE_FILE=
-#export SNPSLMD_LICENSE_FILE=/opt/opt/tools/synopsys_license.txt
-
 export SNPSLMD_LICENSE_FILE=27020@smu409-01
 
 #export VCS_HOME="/opt/tools/synopsys/vcs-mx/O-2018.09-SP2-3"
