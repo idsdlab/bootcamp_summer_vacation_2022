@@ -9,8 +9,8 @@
 - 심현진: https://github.com/shyeonjin/
 
 ## 참여학생(3학년)
-- 박수빈:  
-- 박주은: 
+- 박수빈: https://github.com/subinparkkate 
+- 박주은: https://github.com/juxge01
 - 박상철: https://github.com/parkcreate
 - 박수환: https://github.com/suhwan99
 
