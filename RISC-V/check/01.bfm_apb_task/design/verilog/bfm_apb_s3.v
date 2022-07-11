@@ -69,7 +69,8 @@ module bfm_apb_s3
         memory_test({P_ADDR_START1,16'h0}, {P_ADDR_START1,16'h0}+32'h10-1, 4);
         memory_test({P_ADDR_START2,16'h0}, {P_ADDR_START2,16'h0}+32'h10-1, 4);
         repeat (5) @ (posedge PCLK);
-        $finish(2);
+        //$finish(2);
+        $stop(2);
     end
     //----------------------------------------------------
     reg [P_DWIDTH-1:0] reposit[0:1023];
