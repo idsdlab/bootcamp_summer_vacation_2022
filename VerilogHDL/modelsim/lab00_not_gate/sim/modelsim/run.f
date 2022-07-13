@@ -1,2 +1,2 @@
-../../src/rtl/not_with_dff.v
+../../src/rtl/not_gate.v
 ../../testbench/testbench.v
