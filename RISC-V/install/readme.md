@@ -131,7 +131,8 @@ You can choose any way of installation:
     * below TBD
     * copy Linux device manager settings file **schoolRISCV/install/files/100-altera.rules** to **/etc/udev/rules.d/**
     * reference site: https://www.intel.com/content/www/us/en/support/programmable/support-resources/download/dri-usb-b-lnx.html
-
+    * minicom permission issue: https://askubuntu.com/questions/133235/how-do-i-allow-non-root-access-to-ttyusb0
+    * $# usermod -a -G dialout $USER (example user) then reboot
         ```bash
         # /etc/udev/rules.d/51-usbblaster.rules
         # Intel FPGA Download Cable
