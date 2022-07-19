@@ -130,23 +130,17 @@ You can choose any way of installation:
         ```
     * below TBD
     * copy Linux device manager settings file **schoolRISCV/install/files/100-altera.rules** to **/etc/udev/rules.d/**
+    * reference site: https://www.intel.com/content/www/us/en/support/programmable/support-resources/download/dri-usb-b-lnx.html
 
         ```bash
-        # /etc/udev/rules.d/100-altera.rules
-        # USB-Blaster
-        SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTRS{idVendor}=="09fb", ATTRS{idProduct}=="6001", MODE:="0666", SYMLINK+="usbblaster/%k"
-        SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTRS{idVendor}=="09fb", ATTRS{idProduct}=="6002", MODE:="0666", SYMLINK+="usbblaster/%k"
-        SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTRS{idVendor}=="09fb", ATTRS{idProduct}=="6003", MODE:="0666", SYMLINK+="usbblaster/%k"
-
-        # USB-Blaster II
-        SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTRS{idVendor}=="09fb", ATTRS{idProduct}=="6010", MODE:="0666", SYMLINK+="usbblaster2/%k"
-        SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTRS{idVendor}=="09fb", ATTRS{idProduct}=="6810", MODE:="0666", SYMLINK+="usbblaster2/%k"
-        ```
-
-    * restart Linux device manager
-
-        ```bash
-        sudo service udev restart
+        # /etc/udev/rules.d/51-usbblaster.rules
+        # Intel FPGA Download Cable
+          SUBSYSTEM=="usb", ATTR{idVendor}=="09fb", ATTR{idProduct}=="6001", MODE="0666"
+          SUBSYSTEM=="usb", ATTR{idVendor}=="09fb", ATTR{idProduct}=="6002", MODE="0666"
+          SUBSYSTEM=="usb", ATTR{idVendor}=="09fb", ATTR{idProduct}=="6003", MODE="0666"
+        # Intel FPGA Download Cable II
+          SUBSYSTEM=="usb", ATTR{idVendor}=="09fb", ATTR{idProduct}=="6010", MODE="0666"
+          SUBSYSTEM=="usb", ATTR{idVendor}=="09fb", ATTR{idProduct}=="6810", MODE="0666"
         ```
 
     * copy **files/.modelsim** to **/home/user** to change default Modelsim font settings
