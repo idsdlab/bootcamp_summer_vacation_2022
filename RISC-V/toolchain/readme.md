@@ -3,17 +3,20 @@
 
 ## compress method
 ```bash
-    $ tar cvzf - riscv-toolchain-fa19 | split -b 40m - riscv-toolchain.tar
+$ tar cvzf - riscv-toolchain-fa19 | split -b 40m - riscv-toolchain.tar
 ```
 
 ## decompress method
 ```bash
-    $ cat riscv-toolchain.tar* | tar xvzf -
+$ cat riscv-toolchain.tar* | tar xvzf -
 ```
 
 ## configure bin env
- - riscv64-unknown-elf-bin2hex: change LIBPATH
+```bash
+riscv64-unknown-elf-bin2hex: change LIBPATH
+```
 
-## Configure .bashrc
- - alias riscv_toolchain='export PATH=$PATH:${extracted_path}/bin'
-    
+## Configure .bashrc : alias riscv_toolchain
+```bash
+alias riscv_toolchain='export PATH=$PATH:${extracted_path}/bin'
+```
