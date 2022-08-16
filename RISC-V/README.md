@@ -39,7 +39,7 @@ $XILINX_VIVADO/data/verilog/src/glbl.v
     - 6개의 테스트 모두 통과해야함
 ### Phase 2 hardware design spec - add peripheral test (timer, gpio)
 - 고대 교수님이 쓰신 RISC-V 책 96p를 참조하여 phripheral을 다운로드
-- 아래의 메모리맵을 참고하여 SMU_RV32I_System.v 에 어드레스 디코더와 주변장치 연결
+- 아래의 메모리맵을 참고하여 SMU_RV32I_System.v 에 어드레스 디코더와 주변장치 연결(GPIO 와 TimerCounter만 구현)
 ```bash
 //======================================================================
 // Address       Peripheral           Peripheral Name         Size
