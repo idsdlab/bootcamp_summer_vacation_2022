@@ -1,8 +1,8 @@
 # 2022 Summer Vacation Bootcamp in Sangmyung University
-## RISC-V Section
 
+## FPGA configuration for simulation
 
-## FPGA SIMULATION Env. (Xilinx Version)
+### FPGA SIMULATION Env. (Xilinx Version)
 
 - below in run.f 
 
@@ -16,9 +16,11 @@ $XILINX_VIVADO/data/verilog/src/glbl.v
 // -f $XILINX_VIVADO/data/secureip/gtxe2_common/gtxe2_common_cell.list.f
 ```
 
-## FPGA SIMULATION Env. (Quartus Version)
+### FPGA SIMULATION Env. (Quartus Version)
 
+## RISC-V Section
 
-## Phase 0 hardware design spec
+### Phase 0 hardware design spec
 
-## Phase 1 hardware design spec
+### Phase 1 hardware design spec
+
