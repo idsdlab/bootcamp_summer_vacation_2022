@@ -18,3 +18,7 @@ $XILINX_VIVADO/data/verilog/src/glbl.v
 
 ## FPGA SIMULATION Env. (Quartus Version)
 
+
+## Phase 0 hardware design spec
+
+## Phase 1 hardware design spec
