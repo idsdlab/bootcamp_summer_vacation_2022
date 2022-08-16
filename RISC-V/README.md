@@ -42,27 +42,30 @@ $XILINX_VIVADO/data/verilog/src/glbl.v
 - 아래의 메모리맵을 참고하여 SMU_RV32I_System.v 에 어드레스 디코더와 주변장치 연결
 ```bash
 //======================================================================
-//     Address       Peripheral           Peripheral Name         Size
-// 0xFFFF_FFFF    -------------   --------------------------      ---------
+// Address       Peripheral           Peripheral Name         Size
+// 0xFFFF_FFFF  -------------   --------------------------      ---------
 //
-//                         Reserved
+//                Reserved
 //
 // 0x8000_3000  -------------  
-//                             GPIO         General Purpose IO         4KB
+//                  GPIO         General Purpose IO            4KB
 // 0x8000_2000  -------------
-//                                TC              Timer Conter                4KB
-// 0x8000_1000  ------------- 
-//                                                   Universal  
-//                             UART         Asynchronous                 4KB
-//                                           Receive/ Transmitter
+//                   TC              Timer Conter              4KB
+// 0x8000_1000  -------------
+// 
+//                  UART           Universal                          
+//                                 Asynchronous                4KB
+//                                 Receive/ Transmitter
 // 0x8000_0000  -------------                                
 //                
 //
+//             ------------- 
+// 0x4000_0000      BIOS                BIOS Memory
 //
 // 0x1000_2000  -------------                                
-//                              Mem         Instruction & Data Memory     8KB
+//                   Mem         Instruction & Data Memory     8KB
 // 0x1000_0000  ------------- 
-//                           Reserved
+//                Reserved
 // 0x0000_0000  -------------    
 //=======================================================================
 ```
