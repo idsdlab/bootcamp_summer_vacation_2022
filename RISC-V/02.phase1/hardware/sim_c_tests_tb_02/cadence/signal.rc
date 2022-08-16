@@ -1,0 +1,90 @@
+Magic 271485
+Revision Verdi_O-2018.09-SP2-11
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 27 1918 332 214 164
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/projects/smu_project/soc_study/lx_project/bfm_apb_task/sim/cadence/wave.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 2595.700000
+cursor 371.000000
+marker 371.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 7
+; marker line index
+markerPos 15
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/projects/smu_project/soc_study/lx_project/bfm_apb_task/sim/cadence/wave.fsdb"
+addSignal -h 15 /top/PCLK
+addSignal -h 15 -holdScope PRESETn
+addGroup "G2"
+addSignal -h 15 /top/PADDR[31:0]
+addSignal -h 15 -holdScope PENABLE
+addSignal -h 15 -holdScope PPROT[2:0]
+addSignal -expanded -h 15 -holdScope PREADY[2:0]
+addSignal -h 15 -holdScope PREADY[2]
+addSignal -h 15 -holdScope PREADY[1]
+addSignal -h 15 -holdScope PREADY[0]
+addSignal -expanded -h 15 -holdScope PSEL[2:0]
+addSignal -h 15 -holdScope PSEL[2]
+addSignal -h 15 -holdScope PSEL[1]
+addSignal -h 15 -holdScope PSEL[0]
+addSignal -h 15 -holdScope PWRITE
+addSignal -h 15 -holdScope PSLVERR[2:0]
+addSignal -h 15 -holdScope PWDATA[31:0]
+addGroup "G3"
+addSignal -h 15 /top/PRDATA0[31:0]
+addSignal -h 15 -holdScope PRDATA1[31:0]
+addSignal -h 15 -holdScope PRDATA2[31:0]
+addSignal -h 15 -holdScope PRDATA[95:0]
+addSignal -h 15 -holdScope PSTRB[3:0]
+addGroup "G4"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/projects/smu_project/soc_study/lx_project/bfm_apb_task/sim/cadence/wave.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/top"
+
+SCOPE_LIST_BEGIN
+"/top"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+

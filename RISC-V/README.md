@@ -21,6 +21,49 @@ $XILINX_VIVADO/data/verilog/src/glbl.v
 ## RISC-V Section
 
 ### Phase 0 hardware design spec
-
-### Phase 1 hardware design spec
-
+### Phase 1 hardware design spec - add CSR register & c_tests
+- add CSR register 
+    - mem_path.vh의 아래 주석을 지우고 경로대로  csr 레지스터 구현
+        ```bash
+        //`define CSR_PATH  CPU.icpu.i_datapath.tohost_csr
+        ```
+    -  csrw & csrwi 
+    ![csr](./02.phase1/doc/csr2.PNG)
+    ![csr](./02.phase1/doc/csr1.PNG)
+    - Write 동작만 구현(csr = rs1, csr = ZeroExt(uimm))
+    - 이후 테스트벤치의 CSR test 부분 주석을 해제하고 cpu_tb 시뮬레이션 진행
+- c_test simultaion
+    - phase1의 hardware 폴더안에 c_tests_tb 이용하여 시뮬레이션
+    - phase1의 software 폴더안에 6개의 c_test를 각각 hex파일로 만들어 시뮬레이션 폴더에 복사하여 시뮬레이션 진행
+    - 테스트 성공시 CSR test PASSED!, 테스트 실패시 CSR test FAILED!가 뜨면서 시뮬레이션이 종료됨
+    - 6개의 테스트 모두 통과해야함
+### Phase 2 hardware design spec - add peripheral test (timer, gpio)
+- 고대 교수님이 쓰신 RISC-V 책 96p를 참조하여 phripheral을 다운로드
+- 아래의 메모리맵을 참고하여 SMU_RV32I_System.v 에 어드레스 디코더와 주변장치 연결
+```bash
+//======================================================================
+//     Address       Peripheral           Peripheral Name         Size
+// 0xFFFF_FFFF    -------------   --------------------------      ---------
+//
+//                         Reserved
+//
+// 0x8000_3000  -------------  
+//                             GPIO         General Purpose IO         4KB
+// 0x8000_2000  -------------
+//                                TC              Timer Conter                4KB
+// 0x8000_1000  ------------- 
+//                                                   Universal  
+//                             UART         Asynchronous                 4KB
+//                                           Receive/ Transmitter
+// 0x8000_0000  -------------                                
+//                
+//
+//
+// 0x1000_2000  -------------                                
+//                              Mem         Instruction & Data Memory     8KB
+// 0x1000_0000  ------------- 
+//                           Reserved
+// 0x0000_0000  -------------    
+//=======================================================================
+```
+- 이후 주변장치를 검증하는 커스텀 소프트웨어를 c로 구현해 hex file을 생성해 c_test 수행
