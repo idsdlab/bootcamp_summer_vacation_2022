@@ -69,4 +69,4 @@ $XILINX_VIVADO/data/verilog/src/glbl.v
 // 0x0000_0000  -------------    
 //=======================================================================
 ```
-- 이후 주변장치를 검증하는 커스텀 소프트웨어를 c로 구현해 hex file을 생성해 c_test 수행
+- 이후 phase2의 software 폴더안의 peripheral test 진행후 verdi를 통해 분석
