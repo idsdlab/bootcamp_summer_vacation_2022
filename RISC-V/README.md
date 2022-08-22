@@ -92,7 +92,7 @@ $XILINX_VIVADO/data/verilog/src/glbl.v
 -y ../../model/verilog/Altera_PLL/
 ```
 
-- when you use synchrous read/write memory, you check memory_macro.sv file
+- when you use synchrous read/write memory, you check dualport_mem_synch_rw.sv file
 
 
 
