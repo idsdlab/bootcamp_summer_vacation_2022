@@ -18,6 +18,20 @@ $XILINX_VIVADO/data/verilog/src/glbl.v
 
 ### FPGA SIMULATION Env. (Quartus Version)
 
+- below in run.f
+* Warning: you should change relative path
+
+```bash
+//////// INTEL FPGA LIBRARY /////
+-v ../../sim_model/de2-115/sim_lib/220model.v
+-v ../../sim_model/de2-115/sim_lib/altera_mf.v
+-v ../../sim_model/de2-115/sim_lib/sgate.v
+-v ../../sim_model/de2-115/sim_lib/cycloneive_atoms.v
+
++libext+.v+.vlib
+
+```
+
 ## RISC-V Section
 
 ### Phase 0 hardware design spec
@@ -70,3 +84,17 @@ $XILINX_VIVADO/data/verilog/src/glbl.v
 //=======================================================================
 ```
 - 이후 phase2의 software 폴더안의 peripheral test 진행후 verdi를 통해 분석
+
+### Phase 3 hardware design spec - PLL test on intel DE2-115 FPGA Board
+
+``` bash
++incdir+../../model/verilog/Altera_PLL/
+-y ../../model/verilog/Altera_PLL/
+```
+
+- when you use synchrous read/write memory, you check memory_macro.sv file
+
+
+
+
+
