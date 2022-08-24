@@ -93,6 +93,40 @@ $XILINX_VIVADO/data/verilog/src/glbl.v
 ```
 
 - when you use synchrous read/write memory, you check dualport_mem_synch_rw.sv file
+### Phase 4 hardware design spec - Add UART & BIOS
+1. Integrated UART
+ - memory map address for UART
+ ![uart_memorymap](./05.phase4/docs/uart_memory_map.png)
+
+ - Note: You should change ADDRESS Decoder & Data mux
+
+2. UART Test software
+    1. echo program
+        + check software directory: echo
+        + check bench directory: echo_tb.v
+    2. uart_parse program
+        + check software directory: uart_parse
+        + check bench directory: uart_parse_tb.v
+
+* Note: You shoud verify RTL & FPGA Simulation
+    - RTL baudrate : 1_000_000 in main clock 50MHz
+    - FPGA baudrate : 19_200 in main clock 10MHz
+
+3. BIOS design for user software download
+  - Integrated BIOS memory
+  - memory address & map structure
+ ![bios_memory_map](./05.phase4/docs/memory_map.png)
+ ![memory_address](./05.phase4/docs/memory_address.png)
+
+ - bios program
+    + check software directory: bios
+    + check bench directory: bios_tb.v
+
+ * Note: You shoud verify RTL & FPGA Simulation
+    - RTL baudrate : 1_000_000 in main clock 50MHz
+    - FPGA baudrate : 19_200 in main clock 10MHz
+
+4. Next phase 5
 
 
 
