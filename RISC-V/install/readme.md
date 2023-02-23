@@ -124,15 +124,12 @@ You can choose any way of installation:
         - [x] Modelsim Intel FPGA Starter Edition (Free)
 
         ```bash
-        # /tools/script/bash_riscv.rc
-        export PATH=$PATH:/tools/intelFPGA_lite/20.1/quartus/bin
-        export PATH=$PATH:tools/intelFPGA_lite/20.1/modelsim_ase/bin
+        # /tools/script/bash_quartus.rc
+        export PATH=$PATH:/tools/intelFPGA_lite/20.1.1/quartus/bin
+        # export PATH=$PATH:tools/intelFPGA_lite/20.1.1/modelsim_ase/bin
         ```
-    * below TBD
-    * copy Linux device manager settings file **schoolRISCV/install/files/100-altera.rules** to **/etc/udev/rules.d/**
-    * reference site: https://www.intel.com/content/www/us/en/support/programmable/support-resources/download/dri-usb-b-lnx.html
-    * minicom permission issue: https://askubuntu.com/questions/133235/how-do-i-allow-non-root-access-to-ttyusb0
-    * $# usermod -a -G dialout $USER (example user) then reboot
+    * $# usermod -a -G dialout $USER (example user)
+    
         ```bash
         # /etc/udev/rules.d/51-usbblaster.rules
         # Intel FPGA Download Cable
@@ -143,8 +140,13 @@ You can choose any way of installation:
           SUBSYSTEM=="usb", ATTR{idVendor}=="09fb", ATTR{idProduct}=="6010", MODE="0666"
           SUBSYSTEM=="usb", ATTR{idVendor}=="09fb", ATTR{idProduct}=="6810", MODE="0666"
         ```
-
+    * $# udevadm control --reload-rules && udevadm trigger
+	
+    ================ Reference ==================
+    * reference site: https://www.intel.com/content/www/us/en/support/programmable/support-resources/download/dri-usb-b-lnx.html
+    * minicom permission issue: https://askubuntu.com/questions/133235/how-do-i-allow-non-root-access-to-ttyusb0
     * copy **files/.modelsim** to **/home/user** to change default Modelsim font settings
+    ==============================================
 1. Reboot & log in again to apply profile settings changes
 
 
