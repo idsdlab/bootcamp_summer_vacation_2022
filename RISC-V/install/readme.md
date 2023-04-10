@@ -136,7 +136,7 @@ You can choose any way of installation:
 		SUBSYSTEM=="usb", ATTR{idVendor}=="09fb", ATTR{idProduct}=="6001", MODE="0666", GROUP="plugdev"
 		SUBSYSTEM=="usb", ATTR{idVendor}=="09fb", ATTR{idProduct}=="6002", MODE="0666", GROUP="plugdev"
 		SUBSYSTEM=="usb", ATTR{idVendor}=="09fb", ATTR{idProduct}=="6003", MODE="0666", GROUP="plugdev"
-etc/ud
+
     * $# udevadm control --reload-rules && udevadm trigger
 	
     ================ Reference ==================
